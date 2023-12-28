@@ -1,0 +1,56 @@
+.shadow-bp5-elevation-0, .shadow-bp5-elevation-2, .hover\:shadow-bp5-elevation-4 {
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000
+}
+
+.bg-bp5-app-background-color {
+  --tw-bg-opacity: 1;
+  background-color: rgb(246 247 249 / var(--tw-bg-opacity))
+}
+
+.bg-bp5-text-selection-color {
+  background-color: #7dbcff99
+}
+
+.font-bp5-sans {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, blueprint-icons-16, sans-serif
+}
+
+.text-bp5-text-color {
+  --tw-text-opacity: 1;
+  color: rgb(28 33 39 / var(--tw-text-opacity))
+}
+
+.text-bp5-text-selection-color {
+  color: #7dbcff99
+}
+
+.shadow-bp5-elevation-0 {
+  --tw-shadow: 0 0 0 1px rgba(17, 20, 24, 0.15);
+  --tw-shadow-colored: 0 0 0 1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}
+
+.shadow-bp5-elevation-2 {
+  --tw-shadow: 0 0 0 1px rgba(17, 20, 24, 0.1), 0 1px 1px rgba(17, 20, 24, 0.2), 0 2px 6px rgba(17, 20, 24, 0.2);
+  --tw-shadow-colored: 0 0 0 1px var(--tw-shadow-color), 0 1px 1px var(--tw-shadow-color), 0 2px 6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}
+
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms
+}
+
+.ease-bp5 {
+  transition-timing-function: cubic-bezier(0.4, 1, 0.75, 0.9)
+}
+
+.hover\:shadow-bp5-elevation-4:hover {
+  --tw-shadow: 0 0 0 1px rgba(17, 20, 24, 0.1), 0 4px 8px rgba(17, 20, 24, 0.2), 0 18px 46px 6px rgba(17, 20, 24, 0.2);
+  --tw-shadow-colored: 0 0 0 1px var(--tw-shadow-color), 0 4px 8px var(--tw-shadow-color), 0 18px 46px 6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}

@@ -1,0 +1,33 @@
+{
+    "name": "tailwindcss-preset-blueprintjs",
+    "version": "1.0.0",
+    "description": "A preset for Tailwind CSS to load colors, shadows, fonts, and transitions from BlueprintJS.",
+    "keywords": [
+        "tailwindcss",
+        "blueprintjs"
+    ],
+    "homepage": "https://github.com/jdharrisnz/tailwindcss-preset-blueprintjs#readme",
+    "bugs": {
+        "url": "https://github.com/jdharrisnz/tailwindcss-preset-blueprintjs/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jdharrisnz/tailwindcss-preset-blueprintjs.git"
+    },
+    "license": "Apache-2.0",
+    "author": "Josh Harris",
+    "exports": {
+        "./bp5": "./presets/bp5/index.js",
+        "./bp5/blueprint": "./presets/bp5/blueprint.js"
+    },
+    "main": "./presets/bp5/index.js",
+    "scripts": {
+        "test": "npx tailwindcss -c ./test/tailwind.config.js -i ./test/index.css -o ./test/output.css"
+    },
+    "dependencies": {
+        "@blueprintjs/core": ">=5.0"
+    },
+    "devDependencies": {
+        "tailwindcss": "^3.4.0"
+    }
+}
