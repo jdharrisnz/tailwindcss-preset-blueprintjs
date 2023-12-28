@@ -19,10 +19,10 @@ There are three broad things to note regarding naming:
 
 1. All class names are prefixed with `bp5-`. For example, `text-black` should be written as
    `text-bp5-black`.
-2. The [variables](https://blueprintjs.com/docs/#core/variables) page lists names with `$pt-`
-   prefixed, which you can ignore.
-3. The [variables](https://blueprintjs.com/docs/#core/variables) page lists dark variants with
-   `dark-` at the start of the name. This has been moved to the end. For example,
+2. Blueprint's [variables](https://blueprintjs.com/docs/#core/variables) page lists names with
+   `$pt-` prefixed, which you can ignore.
+3. Blueprint's [variables](https://blueprintjs.com/docs/#core/variables.color-aliases) page lists
+   dark variants with `dark-` at the start of the name. This has been moved to the end. For example,
    `bg-bp5-app-background-dark`.
 
 Otherwise, the class names generally match those listed in the Blueprint docs for
@@ -33,11 +33,13 @@ below).
 ### Colors
 
 **Named Colors:** These all match the [colors](https://blueprintjs.com/docs/#core/colors) docs, with
-the exception that the numbered versions should be written with a dash before the number. For
-example, `bg-bp5-gray-2`.
+the exceptions noted above. The numbered versions should be written with a dash between the color
+and the number, for example, `bg-bp5-gray-2`.
 
-**Semantic Colors:** For colors with `color` in the original name, this has been left in, since
-Tailwind's color class names only read correctly if the color used is the name of an actual color.
+**Semantic Colors:** These all match the
+[variables](https://blueprintjs.com/docs/#core/variables.color-aliases) docs, with the exceptions
+noted above. For colors with `color` in the original name, this has been left in, since Tailwind's
+color class names only read correctly if the color used is the name of an actual color.
 
 ### Shadows
 
@@ -55,6 +57,10 @@ These are not in the docs, but are part of the files (`@blueprintjs/core/lib/scs
 contain `ease` and `ease-bounce`, which can be referenced as Tailwind classes like `ease-bp5` and
 `ease-bp5-bounce`, respectively ("ease" is the Tailwind utility class prefix for
 `transition-timing-function`, which made for awkward naming).
+
+## Installation
+
+Simply run `npm install --save-dev tailwindcss-preset-blueprintjs`.
 
 ## Usage
 
