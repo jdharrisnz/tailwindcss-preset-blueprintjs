@@ -9,9 +9,8 @@ This package provides a preset to make available as Tailwind utility classes the
 fonts, and transitions used by Blueprint version 5. If you want to pick out only certain parts, you
 can also simply import each element separately and spread it into your config.
 
-**Dependencies:** Blueprint only, as the `Colors` object is imported to help construct
-[colorsConfig.js](./presets/bp5/colorsConfig.js). For now, I have listed this as `>=5.0`, assuming
-the colours won't change in version 6.
+**Dependencies:** None. The `Colors` object is imported from Blueprint to help construct
+[colorsConfig.js](./src/bp5/colorsConfig.ts), but that's included by Rollup.
 
 ## Naming Conventions
 
@@ -44,7 +43,7 @@ color class names only read correctly if the color used is the name of an actual
 ### Shadows
 
 For all shadows, `shadow` has been removed from the original name so that your class names read
-better. For example, `shadow-bp5-elevation-2`. Dark variants have `-dark` at the end, after the
+better. For example, `shadow-bp5-elevation-2`. Dark variants have `-dark` _at the end_, after the
 number.
 
 ### Fonts
@@ -64,16 +63,22 @@ Simply run `npm install --save-dev tailwindcss-preset-blueprintjs`.
 
 ## Usage
 
-To make everything available, add a `presets` key to your Tailwind config file.
+To make everything available, add a `presets` key to your Tailwind config file. See the test
+[tailwind.config.ts](test/tailwind.config.ts) for a full example.
+
+To use the `require` syntax, you can import from `tailwindcss-preset-blueprintjs/bp5/blueprint`.
 
 ```js
 // tailwind.config.js
+import { blueprint } from "tailwindcss-preset-blueprintjs/bp5"
 
-export default {
+const config = {
     // ...
-    presets: [require("tailwindcss-preset-blueprintjs/bp5/blueprint")]
+    presets: [blueprint]
     // ...
 }
+
+export default config
 ```
 
 Otherwise, you may also import each part separately and spread them into your config.

@@ -1,6 +1,6 @@
-import parseNested from "../utils/parseNested"
+import { parseNested } from '../utils/parseNested.js';
 
-export default {
+const fontFamilyConfig = {
     fontFamily: parseNested({
         bp5: {
             sans: [
@@ -19,4 +19,6 @@ export default {
             mono: ["monospace"]
         }
     })
-}
+};
+
+export { fontFamilyConfig };

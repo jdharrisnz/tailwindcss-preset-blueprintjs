@@ -1,14 +1,6 @@
-import { Colors } from "@blueprintjs/core"
+import { Colors } from '../node_modules/@blueprintjs/colors/lib/esm/colors.js';
 
-const hexOpacity10 = "1a"
-const hexOpacity15 = "26"
-const hexOpacity20 = "33"
-const hexOpacity30 = "4d"
-const hexOpacity40 = "66"
-const hexOpacity60 = "99"
-const hexOpacity70 = "b3"
-
-export default {
+const colorsConfig = {
     colors: {
         bp5: {
             black: Colors.BLACK,
@@ -150,8 +142,8 @@ export default {
                     dark: Colors.GRAY4
                 },
                 disabled: {
-                    DEFAULT: Colors.GRAY1 + hexOpacity60,
-                    dark: Colors.GRAY4 + hexOpacity60
+                    DEFAULT: Colors.GRAY1 + "99",
+                    dark: Colors.GRAY4 + "99"
                 }
             },
             "heading-color": {
@@ -162,7 +154,7 @@ export default {
                 DEFAULT: Colors.BLUE2,
                 dark: Colors.BLUE5
             },
-            "text-selection-color": "#7dbcff" + hexOpacity60,
+            "text-selection-color": "#7dbcff" + "99",
             "icon-color": {
                 DEFAULT: Colors.GRAY1,
                 dark: Colors.GRAY4,
@@ -171,8 +163,8 @@ export default {
                     dark: Colors.LIGHT_GRAY5
                 },
                 disabled: {
-                    DEFAULT: Colors.GRAY1 + hexOpacity60,
-                    dark: Colors.GRAY4 + hexOpacity60
+                    DEFAULT: Colors.GRAY1 + "99",
+                    dark: Colors.GRAY4 + "99"
                 },
                 selected: {
                     DEFAULT: Colors.BLUE3,
@@ -181,13 +173,13 @@ export default {
             },
             divider: {
                 black: {
-                    DEFAULT: Colors.BLACK + hexOpacity15,
-                    dark: Colors.BLACK + hexOpacity40,
-                    muted: Colors.BLACK + hexOpacity10
+                    DEFAULT: Colors.BLACK + "26",
+                    dark: Colors.BLACK + "66",
+                    muted: Colors.BLACK + "1a"
                 },
                 white: {
-                    dark: Colors.WHITE + hexOpacity20,
-                    muted: Colors.WHITE + hexOpacity10
+                    dark: Colors.WHITE + "33",
+                    muted: Colors.WHITE + "1a"
                 }
             },
             code: {
@@ -196,10 +188,12 @@ export default {
                     dark: Colors.GRAY4
                 },
                 "background-color": {
-                    DEFAULT: Colors.WHITE + hexOpacity70,
-                    dark: Colors.BLACK + hexOpacity30
+                    DEFAULT: Colors.WHITE + "b3",
+                    dark: Colors.BLACK + "4d"
                 }
             }
         }
     }
-}
+};
+
+export { colorsConfig };

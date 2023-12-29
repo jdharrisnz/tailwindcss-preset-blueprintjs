@@ -16,18 +16,166 @@
     },
     "license": "Apache-2.0",
     "author": "Josh Harris",
+    "type": "module",
     "exports": {
-        "./bp5": "./presets/bp5/index.js",
-        "./bp5/blueprint": "./presets/bp5/blueprint.js"
+        "./bp5": {
+            "types": "./dist/types/bp5/index.d.ts",
+            "import": "./dist/esm/bp5/index.js",
+            "require": "./dist/cjs/bp5/index.js",
+            "default": "./dist/esm/bp5/index.js"
+        },
+        "./bp5/blueprint": {
+            "types": "./dist/types/bp5/blueprint.d.ts",
+            "import": "./dist/esm/bp5/blueprint.js",
+            "require": "./dist/cjs/bp5/blueprint.js",
+            "default": "./dist/esm/bp5/blueprint.js"
+        }
     },
-    "main": "./presets/bp5/index.js",
+    "main": "./dist/cjs/bp5/index.js",
+    "module": "./dist/esm/bp5/index.js",
+    "files": [
+        "dist/"
+    ],
     "scripts": {
-        "test": "npx tailwindcss -c ./test/tailwind.config.js -i ./test/index.css -o ./test/output.css"
+        "build": "npm run build:js && npm run build:types",
+        "build:js": "npx rollup --config rollup.config.ts --configPlugin typescript",
+        "build:types": "npx tsc -p tsconfig.types.json",
+        "test": "npx tailwindcss -c ./test/tailwind.config.ts -i ./test/index.css -o ./test/output.css"
     },
-    "dependencies": {
-        "@blueprintjs/core": ">=5.0"
+    "eslintConfig": {
+        "parser": "@typescript-eslint/parser",
+        "parserOptions": {
+            "ecmaVersion": "latest",
+            "project": "./tsconfig.json",
+            "sourceType": "module"
+        },
+        "settings": {
+            "import/parsers": {
+                "@typescript-eslint/parser": [
+                    ".ts"
+                ]
+            },
+            "import/resolver": {
+                "typescript": {
+                    "alwaysTryTypes": true,
+                    "project": "./tsconfig.json"
+                }
+            }
+        },
+        "plugins": [
+            "import",
+            "@typescript-eslint"
+        ],
+        "extends": [
+            "eslint:recommended",
+            "plugin:@typescript-eslint/recommended",
+            "plugin:@typescript-eslint/strict-type-checked",
+            "plugin:@typescript-eslint/stylistic-type-checked",
+            "airbnb-base",
+            "airbnb-typescript-base",
+            "prettier"
+        ],
+        "rules": {
+            "implicit-arrow-linebreak": "off",
+            "no-duplicate-imports": "off",
+            "no-underscore-dangle": "off",
+            "no-unused-vars": "off",
+            "@typescript-eslint/naming-convention": [
+                "warn",
+                {
+                    "selector": "default",
+                    "format": [
+                        "camelCase"
+                    ],
+                    "leadingUnderscore": "allow",
+                    "trailingUnderscore": "allow"
+                },
+                {
+                    "selector": "import",
+                    "format": [
+                        "camelCase",
+                        "PascalCase"
+                    ]
+                },
+                {
+                    "selector": "variable",
+                    "format": [
+                        "camelCase",
+                        "UPPER_CASE",
+                        "PascalCase"
+                    ],
+                    "leadingUnderscore": "allow",
+                    "trailingUnderscore": "allow"
+                },
+                {
+                    "selector": "typeLike",
+                    "format": [
+                        "PascalCase"
+                    ],
+                    "leadingUnderscore": "allow"
+                },
+                {
+                    "selector": [
+                        "objectLiteralMethod",
+                        "objectLiteralProperty",
+                        "classMethod",
+                        "classProperty"
+                    ],
+                    "format": [
+                        "camelCase"
+                    ],
+                    "trailingUnderscore": "allow"
+                },
+                {
+                    "selector": "enum",
+                    "format": [
+                        "PascalCase"
+                    ]
+                },
+                {
+                    "selector": "enumMember",
+                    "format": [
+                        "UPPER_CASE"
+                    ]
+                }
+            ],
+            "@typescript-eslint/no-non-null-assertion": "off",
+            "@typescript-eslint/no-shadow": [
+                "warn",
+                {
+                    "allow": [
+                        "_"
+                    ]
+                }
+            ],
+            "@typescript-eslint/no-unused-vars": "off",
+            "@typescript-eslint/no-use-before-define": "off",
+            "import/no-duplicates": "off",
+            "import/order": "off",
+            "import/prefer-default-export": "off"
+        },
+        "ignorePatterns": [
+            "dist",
+            "test",
+            "rollup.config.js"
+        ],
+        "root": true
     },
     "devDependencies": {
-        "tailwindcss": "^3.4.0"
+        "@blueprintjs/core": "^5.7.2",
+        "@rollup/plugin-node-resolve": "^15.2.3",
+        "@rollup/plugin-typescript": "^11.1.5",
+        "@types/node": "^20.10.5",
+        "@typescript-eslint/eslint-plugin": "^6.16.0",
+        "@typescript-eslint/parser": "^6.16.0",
+        "eslint": "^8.56.0",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-config-airbnb-typescript-base": "^5.0.1",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-import-resolver-typescript": "^3.6.1",
+        "eslint-plugin-import": "^2.29.1",
+        "rollup": "^4.9.1",
+        "tailwindcss": "^3.4.0",
+        "typescript": "^5.3.3"
     }
 }

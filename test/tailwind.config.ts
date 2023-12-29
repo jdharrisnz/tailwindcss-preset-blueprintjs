@@ -1,8 +1,10 @@
-/** @type {import('tailwindcss').Config} */
+import { blueprint } from "../src/bp5"
 
-export default {
+import type { Config } from "tailwindcss"
+
+const config: Config = {
     content: ["./test/index.html"],
-    presets: [require("../presets/bp5/blueprint")],
+    presets: [blueprint],
     theme: {
         extend: {}
     },
@@ -14,3 +16,5 @@ export default {
         optimizeUniversalDefaults: true
     }
 }
+
+export default config

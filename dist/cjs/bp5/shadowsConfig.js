@@ -1,7 +1,9 @@
-import parseNested from "../utils/parseNested"
+'use strict';
 
-export default {
-    boxShadow: parseNested({
+var parseNested = require('../utils/parseNested.js');
+
+var shadowsConfig = {
+    boxShadow: parseNested.parseNested({
         bp5: {
             elevation: {
                 0: {
@@ -96,9 +98,7 @@ export default {
                     "0 2px 4px rgba(17, 20, 24, 0.2)",
                     "0 8px 24px rgba(17, 20, 24, 0.2)"
                 ].join(", "),
-                dark: ["0 2px 4px rgba(17, 20, 24, 0.4)", "0 8px 24px rgba(17, 20, 24, 0.4)"].join(
-                    ", "
-                )
+                dark: ["0 2px 4px rgba(17, 20, 24, 0.4)", "0 8px 24px rgba(17, 20, 24, 0.4)"].join(", ")
             },
             toast: {
                 DEFAULT: [
@@ -114,4 +114,6 @@ export default {
             }
         }
     })
-}
+};
+
+exports.shadowsConfig = shadowsConfig;
