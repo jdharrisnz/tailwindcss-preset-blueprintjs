@@ -92,7 +92,7 @@ import {
     transitionTimingConfig
 } from "tailwindcss-preset-blueprintjs/bp5"
 
-export default {
+const config = {
     // ...
     theme: {
         extend: {
@@ -105,6 +105,8 @@ export default {
     }
     // ...
 }
+
+export default config
 ```
 
 ## All the Classes
