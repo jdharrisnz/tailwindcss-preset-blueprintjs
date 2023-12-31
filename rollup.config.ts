@@ -5,7 +5,7 @@ import type { RollupOptions } from "rollup"
 
 const config: RollupOptions[] = [
     {
-        input: ["./src/bp5/blueprint.ts"],
+        input: ["./src/bp5/index.ts"],
         output: {
             format: "esm",
             dir: "./dist/esm",
@@ -15,7 +15,7 @@ const config: RollupOptions[] = [
         plugins: [nodeResolve(), typescript({ tsconfig: "./tsconfig.json" })]
     },
     {
-        input: ["./src/bp5/blueprint.ts"],
+        input: ["./src/bp5/index.ts"],
         output: {
             format: "cjs",
             dir: "./dist/cjs",

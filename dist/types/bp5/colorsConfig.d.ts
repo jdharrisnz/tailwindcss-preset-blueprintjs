@@ -1,193 +1,193 @@
 export declare const colorsConfig: {
-    readonly colors: {
-        readonly bp5: {
-            readonly black: string;
-            readonly white: string;
-            readonly "dark-gray": {
-                readonly 1: string;
-                readonly 2: string;
-                readonly 3: string;
-                readonly 4: string;
-                readonly 5: string;
+    colors: {
+        bp5: {
+            black: string;
+            white: string;
+            "dark-gray": {
+                1: string;
+                2: string;
+                3: string;
+                4: string;
+                5: string;
             };
-            readonly gray: {
-                readonly 1: string;
-                readonly 2: string;
-                readonly 3: string;
-                readonly 4: string;
-                readonly 5: string;
+            gray: {
+                1: string;
+                2: string;
+                3: string;
+                4: string;
+                5: string;
             };
-            readonly "light-gray": {
-                readonly 1: string;
-                readonly 2: string;
-                readonly 3: string;
-                readonly 4: string;
-                readonly 5: string;
+            "light-gray": {
+                1: string;
+                2: string;
+                3: string;
+                4: string;
+                5: string;
             };
-            readonly blue: {
-                readonly 1: string;
-                readonly 2: string;
-                readonly 3: string;
-                readonly 4: string;
-                readonly 5: string;
+            blue: {
+                1: string;
+                2: string;
+                3: string;
+                4: string;
+                5: string;
             };
-            readonly green: {
-                readonly 1: string;
-                readonly 2: string;
-                readonly 3: string;
-                readonly 4: string;
-                readonly 5: string;
+            green: {
+                1: string;
+                2: string;
+                3: string;
+                4: string;
+                5: string;
             };
-            readonly orange: {
-                readonly 1: string;
-                readonly 2: string;
-                readonly 3: string;
-                readonly 4: string;
-                readonly 5: string;
+            orange: {
+                1: string;
+                2: string;
+                3: string;
+                4: string;
+                5: string;
             };
-            readonly red: {
-                readonly 1: string;
-                readonly 2: string;
-                readonly 3: string;
-                readonly 4: string;
-                readonly 5: string;
+            red: {
+                1: string;
+                2: string;
+                3: string;
+                4: string;
+                5: string;
             };
-            readonly vermilion: {
-                readonly 1: string;
-                readonly 2: string;
-                readonly 3: string;
-                readonly 4: string;
-                readonly 5: string;
+            vermilion: {
+                1: string;
+                2: string;
+                3: string;
+                4: string;
+                5: string;
             };
-            readonly rose: {
-                readonly 1: string;
-                readonly 2: string;
-                readonly 3: string;
-                readonly 4: string;
-                readonly 5: string;
+            rose: {
+                1: string;
+                2: string;
+                3: string;
+                4: string;
+                5: string;
             };
-            readonly violet: {
-                readonly 1: string;
-                readonly 2: string;
-                readonly 3: string;
-                readonly 4: string;
-                readonly 5: string;
+            violet: {
+                1: string;
+                2: string;
+                3: string;
+                4: string;
+                5: string;
             };
-            readonly indigo: {
-                readonly 1: string;
-                readonly 2: string;
-                readonly 3: string;
-                readonly 4: string;
-                readonly 5: string;
+            indigo: {
+                1: string;
+                2: string;
+                3: string;
+                4: string;
+                5: string;
             };
-            readonly cerulean: {
-                readonly 1: string;
-                readonly 2: string;
-                readonly 3: string;
-                readonly 4: string;
-                readonly 5: string;
+            cerulean: {
+                1: string;
+                2: string;
+                3: string;
+                4: string;
+                5: string;
             };
-            readonly turquoise: {
-                readonly 1: string;
-                readonly 2: string;
-                readonly 3: string;
-                readonly 4: string;
-                readonly 5: string;
+            turquoise: {
+                1: string;
+                2: string;
+                3: string;
+                4: string;
+                5: string;
             };
-            readonly forest: {
-                readonly 1: string;
-                readonly 2: string;
-                readonly 3: string;
-                readonly 4: string;
-                readonly 5: string;
+            forest: {
+                1: string;
+                2: string;
+                3: string;
+                4: string;
+                5: string;
             };
-            readonly lime: {
-                readonly 1: string;
-                readonly 2: string;
-                readonly 3: string;
-                readonly 4: string;
-                readonly 5: string;
+            lime: {
+                1: string;
+                2: string;
+                3: string;
+                4: string;
+                5: string;
             };
-            readonly gold: {
-                readonly 1: string;
-                readonly 2: string;
-                readonly 3: string;
-                readonly 4: string;
-                readonly 5: string;
+            gold: {
+                1: string;
+                2: string;
+                3: string;
+                4: string;
+                5: string;
             };
-            readonly sepia: {
-                readonly 1: string;
-                readonly 2: string;
-                readonly 3: string;
-                readonly 4: string;
-                readonly 5: string;
+            sepia: {
+                1: string;
+                2: string;
+                3: string;
+                4: string;
+                5: string;
             };
-            readonly intent: {
-                readonly primary: string;
-                readonly success: string;
-                readonly warning: string;
-                readonly danger: string;
+            intent: {
+                primary: string;
+                success: string;
+                warning: string;
+                danger: string;
             };
-            readonly "app-background-color": {
-                readonly DEFAULT: string;
-                readonly dark: string;
+            "app-background-color": {
+                DEFAULT: string;
+                dark: string;
             };
-            readonly "text-color": {
-                readonly DEFAULT: string;
-                readonly dark: string;
-                readonly muted: {
-                    readonly DEFAULT: string;
-                    readonly dark: string;
+            "text-color": {
+                DEFAULT: string;
+                dark: string;
+                muted: {
+                    DEFAULT: string;
+                    dark: string;
                 };
-                readonly disabled: {
-                    readonly DEFAULT: string;
-                    readonly dark: string;
-                };
-            };
-            readonly "heading-color": {
-                readonly DEFAULT: string;
-                readonly dark: string;
-            };
-            readonly "link-color": {
-                readonly DEFAULT: string;
-                readonly dark: string;
-            };
-            readonly "text-selection-color": string;
-            readonly "icon-color": {
-                readonly DEFAULT: string;
-                readonly dark: string;
-                readonly hover: {
-                    readonly DEFAULT: string;
-                    readonly dark: string;
-                };
-                readonly disabled: {
-                    readonly DEFAULT: string;
-                    readonly dark: string;
-                };
-                readonly selected: {
-                    readonly DEFAULT: string;
-                    readonly dark: string;
+                disabled: {
+                    DEFAULT: string;
+                    dark: string;
                 };
             };
-            readonly divider: {
-                readonly black: {
-                    readonly DEFAULT: string;
-                    readonly dark: string;
-                    readonly muted: string;
+            "heading-color": {
+                DEFAULT: string;
+                dark: string;
+            };
+            "link-color": {
+                DEFAULT: string;
+                dark: string;
+            };
+            "text-selection-color": string;
+            "icon-color": {
+                DEFAULT: string;
+                dark: string;
+                hover: {
+                    DEFAULT: string;
+                    dark: string;
                 };
-                readonly white: {
-                    readonly dark: string;
-                    readonly muted: string;
+                disabled: {
+                    DEFAULT: string;
+                    dark: string;
+                };
+                selected: {
+                    DEFAULT: string;
+                    dark: string;
                 };
             };
-            readonly code: {
-                readonly "text-color": {
-                    readonly DEFAULT: string;
-                    readonly dark: string;
+            divider: {
+                black: {
+                    DEFAULT: string;
+                    dark: string;
+                    muted: string;
                 };
-                readonly "background-color": {
-                    readonly DEFAULT: string;
-                    readonly dark: string;
+                white: {
+                    dark: string;
+                    muted: string;
+                };
+            };
+            code: {
+                "text-color": {
+                    DEFAULT: string;
+                    dark: string;
+                };
+                "background-color": {
+                    DEFAULT: string;
+                    dark: string;
                 };
             };
         };

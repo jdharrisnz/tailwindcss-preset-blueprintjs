@@ -1,4 +1,4 @@
-/** fontFamily requires `string[]` values. */
+/** FontFamily requires `string[]` values. */
 type StringOrList<L extends boolean = false> = L extends true ? string[] : string
 
 type ObjectableEntry<L extends boolean = false> = [string, StringOrList<L>]
