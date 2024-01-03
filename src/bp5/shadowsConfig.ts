@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/naming-convention */
-import { parseNested } from "../utils/parseNested"
+import { parseNested } from "../utils/parseNested.js"
 
-import type { TailwindConfig } from "../utils/parseNested"
+import type { TailwindConfig } from "../utils/parseNested.js"
 
 export const shadowsConfig: Record<"boxShadow", TailwindConfig> = {
     boxShadow: parseNested({

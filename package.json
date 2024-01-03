@@ -1,6 +1,6 @@
 {
     "name": "tailwindcss-preset-blueprintjs",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "A preset for Tailwind CSS to load colors, shadows, fonts, and transitions from BlueprintJS.",
     "keywords": [
         "tailwindcss",
@@ -38,7 +38,7 @@
     ],
     "scripts": {
         "build": "npm run build:js && npm run build:types",
-        "build:js": "npx rollup --config rollup.config.ts --configPlugin typescript",
+        "build:js": "npx rollup --config rollup.config.js",
         "build:types": "npx tsc -p tsconfig.types.json",
         "test": "npx tailwindcss -c ./test/tailwind.config.ts -i ./test/index.css -o ./test/output.css"
     },

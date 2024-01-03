@@ -1,6 +1,6 @@
-import { parseNested } from "../utils/parseNested"
+import { parseNested } from "../utils/parseNested.js"
 
-import type { TailwindConfig } from "../utils/parseNested"
+import type { TailwindConfig } from "../utils/parseNested.js"
 
 export const fontFamilyConfig: Record<"fontFamily", TailwindConfig<true>> = {
     fontFamily: parseNested({

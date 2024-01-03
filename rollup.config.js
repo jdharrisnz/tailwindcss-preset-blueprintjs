@@ -1,9 +1,10 @@
 import { nodeResolve } from "@rollup/plugin-node-resolve"
 import typescript from "@rollup/plugin-typescript"
 
-import type { RollupOptions } from "rollup"
+// import type { RollupOptions } from "rollup"
 
-const config: RollupOptions[] = [
+// const config: RollupOptions[] = [
+const config = [
     {
         input: ["./src/bp5/index.ts"],
         output: {

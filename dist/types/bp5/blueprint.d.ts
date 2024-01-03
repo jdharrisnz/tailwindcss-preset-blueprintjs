@@ -2,9 +2,9 @@ export declare const blueprint: {
     content: never[];
     theme: {
         extend: {
-            transitionTimingFunction: import("../utils/parseNested").TailwindConfig;
-            fontFamily: import("../utils/parseNested").TailwindConfig<true>;
-            boxShadow: import("../utils/parseNested").TailwindConfig;
+            transitionTimingFunction: import("../utils/parseNested.js").TailwindConfig;
+            fontFamily: import("../utils/parseNested.js").TailwindConfig<true>;
+            boxShadow: import("../utils/parseNested.js").TailwindConfig;
             colors: {
                 bp5: {
                     black: string;
