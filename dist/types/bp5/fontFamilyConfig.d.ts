@@ -1,2 +1,6 @@
-import type { TailwindConfig } from "../utils/parseNested.js";
-export declare const fontFamilyConfig: Record<"fontFamily", TailwindConfig<true>>;
+export declare const fontFamilyConfig: {
+    fontFamily: {
+        "bp5-sans": string[];
+        "bp5-mono": string[];
+    };
+};

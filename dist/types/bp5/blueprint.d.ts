@@ -2,201 +2,63 @@ export declare const blueprint: {
     content: never[];
     theme: {
         extend: {
-            transitionTimingFunction: import("../utils/parseNested.js").TailwindConfig;
-            fontFamily: import("../utils/parseNested.js").TailwindConfig<true>;
-            boxShadow: import("../utils/parseNested.js").TailwindConfig;
+            transitionTimingFunction: {
+                bp5: string;
+                "bp5-bounce": string;
+            };
+            fontFamily: {
+                "bp5-sans": string[];
+                "bp5-mono": string[];
+            };
+            boxShadow: {
+                "bp5-input": string;
+                "bp5-input-dark": string;
+                "bp5-dialog": string;
+                "bp5-dialog-dark": string;
+                "bp5-popover": string;
+                "bp5-popover-dark": string;
+                "bp5-tooltip": string;
+                "bp5-tooltip-dark": string;
+                "bp5-toast": string;
+                "bp5-toast-dark": string;
+            };
             colors: {
-                bp5: {
-                    black: string;
-                    white: string;
-                    "dark-gray": {
-                        1: string;
-                        2: string;
-                        3: string;
-                        4: string;
-                        5: string;
-                    };
-                    gray: {
-                        1: string;
-                        2: string;
-                        3: string;
-                        4: string;
-                        5: string;
-                    };
-                    "light-gray": {
-                        1: string;
-                        2: string;
-                        3: string;
-                        4: string;
-                        5: string;
-                    };
-                    blue: {
-                        1: string;
-                        2: string;
-                        3: string;
-                        4: string;
-                        5: string;
-                    };
-                    green: {
-                        1: string;
-                        2: string;
-                        3: string;
-                        4: string;
-                        5: string;
-                    };
-                    orange: {
-                        1: string;
-                        2: string;
-                        3: string;
-                        4: string;
-                        5: string;
-                    };
-                    red: {
-                        1: string;
-                        2: string;
-                        3: string;
-                        4: string;
-                        5: string;
-                    };
-                    vermilion: {
-                        1: string;
-                        2: string;
-                        3: string;
-                        4: string;
-                        5: string;
-                    };
-                    rose: {
-                        1: string;
-                        2: string;
-                        3: string;
-                        4: string;
-                        5: string;
-                    };
-                    violet: {
-                        1: string;
-                        2: string;
-                        3: string;
-                        4: string;
-                        5: string;
-                    };
-                    indigo: {
-                        1: string;
-                        2: string;
-                        3: string;
-                        4: string;
-                        5: string;
-                    };
-                    cerulean: {
-                        1: string;
-                        2: string;
-                        3: string;
-                        4: string;
-                        5: string;
-                    };
-                    turquoise: {
-                        1: string;
-                        2: string;
-                        3: string;
-                        4: string;
-                        5: string;
-                    };
-                    forest: {
-                        1: string;
-                        2: string;
-                        3: string;
-                        4: string;
-                        5: string;
-                    };
-                    lime: {
-                        1: string;
-                        2: string;
-                        3: string;
-                        4: string;
-                        5: string;
-                    };
-                    gold: {
-                        1: string;
-                        2: string;
-                        3: string;
-                        4: string;
-                        5: string;
-                    };
-                    sepia: {
-                        1: string;
-                        2: string;
-                        3: string;
-                        4: string;
-                        5: string;
-                    };
-                    intent: {
-                        primary: string;
-                        success: string;
-                        warning: string;
-                        danger: string;
-                    };
-                    "app-background-color": {
-                        DEFAULT: string;
-                        dark: string;
-                    };
-                    "text-color": {
-                        DEFAULT: string;
-                        dark: string;
-                        muted: {
-                            DEFAULT: string;
-                            dark: string;
-                        };
-                        disabled: {
-                            DEFAULT: string;
-                            dark: string;
-                        };
-                    };
-                    "heading-color": {
-                        DEFAULT: string;
-                        dark: string;
-                    };
-                    "link-color": {
-                        DEFAULT: string;
-                        dark: string;
-                    };
-                    "text-selection-color": string;
-                    "icon-color": {
-                        DEFAULT: string;
-                        dark: string;
-                        hover: {
-                            DEFAULT: string;
-                            dark: string;
-                        };
-                        disabled: {
-                            DEFAULT: string;
-                            dark: string;
-                        };
-                        selected: {
-                            DEFAULT: string;
-                            dark: string;
-                        };
-                    };
-                    divider: {
-                        black: {
-                            DEFAULT: string;
-                            dark: string;
-                            muted: string;
-                        };
-                        white: {
-                            dark: string;
-                            muted: string;
-                        };
-                    };
-                    code: {
-                        "text-color": {
-                            DEFAULT: string;
-                            dark: string;
-                        };
-                        "background-color": {
-                            DEFAULT: string;
-                            dark: string;
-                        };
-                    };
-                };
+                "bp5-black": string;
+                "bp5-white": string;
+                "bp5-intent-primary": string;
+                "bp5-intent-success": string;
+                "bp5-intent-warning": string;
+                "bp5-intent-danger": string;
+                "bp5-app-background-color": string;
+                "bp5-app-background-color-dark": string;
+                "bp5-text-color": string;
+                "bp5-text-color-dark": string;
+                "bp5-text-color-muted": string;
+                "bp5-text-color-muted-dark": string;
+                "bp5-text-color-disabled": string;
+                "bp5-text-color-disabled-dark": string;
+                "bp5-heading-color": string;
+                "bp5-heading-color-dark": string;
+                "bp5-link-color": string;
+                "bp5-link-color-dark": string;
+                "bp5-text-selection-color": string;
+                "bp5-icon-color": string;
+                "bp5-icon-color-dark": string;
+                "bp5-icon-color-disabled": string;
+                "bp5-icon-color-disabled-dark": string;
+                "bp5-icon-color-hover": string;
+                "bp5-icon-color-hover-dark": string;
+                "bp5-icon-color-selected": string;
+                "bp5-icon-color-selected-dark": string;
+                "bp5-divider-black": string;
+                "bp5-divider-black-dark": string;
+                "bp5-divider-black-muted": string;
+                "bp5-divider-white-dark": string;
+                "bp5-divider-white-muted": string;
+                "bp5-code-text-color": string;
+                "bp5-code-text-color-dark": string;
+                "bp5-code-background-color": string;
+                "bp5-code-background-color-dark": string;
             };
         };
     };

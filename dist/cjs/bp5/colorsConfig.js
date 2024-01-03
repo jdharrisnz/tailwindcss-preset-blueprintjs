@@ -1,9 +1,10 @@
 'use strict';
 
 var colors = require('../node_modules/@blueprintjs/colors/lib/esm/colors.js');
+var unnest = require('../utils/unnest.js');
 
 var colorsConfig = {
-    colors: {
+    colors: unnest.unnest({
         bp5: {
             black: colors.Colors.BLACK,
             white: colors.Colors.WHITE,
@@ -195,7 +196,7 @@ var colorsConfig = {
                 }
             }
         }
-    }
+    })
 };
 
 exports.colorsConfig = colorsConfig;

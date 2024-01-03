@@ -1,7 +1,7 @@
-import { parseNested } from '../utils/parseNested.js';
+import { unnest } from '../utils/unnest.js';
 
 const shadowsConfig = {
-    boxShadow: parseNested({
+    boxShadow: unnest({
         bp5: {
             elevation: {
                 0: {

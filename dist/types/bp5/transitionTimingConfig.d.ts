@@ -1,2 +1,6 @@
-import type { TailwindConfig } from "../utils/parseNested.js";
-export declare const transitionTimingConfig: Record<"transitionTimingFunction", TailwindConfig>;
+export declare const transitionTimingConfig: {
+    transitionTimingFunction: {
+        bp5: string;
+        "bp5-bounce": string;
+    };
+};

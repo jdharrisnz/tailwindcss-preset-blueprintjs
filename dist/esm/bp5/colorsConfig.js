@@ -1,7 +1,8 @@
 import { Colors } from '../node_modules/@blueprintjs/colors/lib/esm/colors.js';
+import { unnest } from '../utils/unnest.js';
 
 const colorsConfig = {
-    colors: {
+    colors: unnest({
         bp5: {
             black: Colors.BLACK,
             white: Colors.WHITE,
@@ -193,7 +194,7 @@ const colorsConfig = {
                 }
             }
         }
-    }
+    })
 };
 
 export { colorsConfig };

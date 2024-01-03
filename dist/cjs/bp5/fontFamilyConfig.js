@@ -1,9 +1,9 @@
 'use strict';
 
-var parseNested = require('../utils/parseNested.js');
+var unnest = require('../utils/unnest.js');
 
 var fontFamilyConfig = {
-    fontFamily: parseNested.parseNested({
+    fontFamily: unnest.unnest({
         bp5: {
             sans: [
                 "-apple-system",

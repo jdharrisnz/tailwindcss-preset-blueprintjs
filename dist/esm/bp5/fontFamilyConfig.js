@@ -1,7 +1,7 @@
-import { parseNested } from '../utils/parseNested.js';
+import { unnest } from '../utils/unnest.js';
 
 const fontFamilyConfig = {
-    fontFamily: parseNested({
+    fontFamily: unnest({
         bp5: {
             sans: [
                 "-apple-system",

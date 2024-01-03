@@ -1,9 +1,9 @@
 'use strict';
 
-var parseNested = require('../utils/parseNested.js');
+var unnest = require('../utils/unnest.js');
 
 var shadowsConfig = {
-    boxShadow: parseNested.parseNested({
+    boxShadow: unnest.unnest({
         bp5: {
             elevation: {
                 0: {
