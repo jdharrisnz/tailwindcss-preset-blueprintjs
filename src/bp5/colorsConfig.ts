@@ -2,6 +2,8 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { Colors } from "@blueprintjs/colors"
 
+import { unnest } from "../unnest.js"
+
 const enum HexOpacity {
     p10 = "1a",
     p15 = "26",
@@ -13,7 +15,7 @@ const enum HexOpacity {
 }
 
 export const colorsConfig = {
-    colors: {
+    colors: unnest({
         bp5: {
             black: Colors.BLACK,
             white: Colors.WHITE,
@@ -206,5 +208,5 @@ export const colorsConfig = {
                 }
             }
         }
-    }
+    })
 }

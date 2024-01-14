@@ -1,9 +1,7 @@
-import { parseNested } from "../utils/parseNested.js"
+import { unnest } from "../unnest.js"
 
-import type { TailwindConfig } from "../utils/parseNested.js"
-
-export const fontFamilyConfig: Record<"fontFamily", TailwindConfig<true>> = {
-    fontFamily: parseNested({
+export const fontFamilyConfig = {
+    fontFamily: unnest({
         bp5: {
             sans: [
                 "-apple-system",

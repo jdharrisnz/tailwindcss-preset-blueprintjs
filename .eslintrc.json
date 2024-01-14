@@ -1,0 +1,48 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "project": "./tsconfig.json",
+        "sourceType": "module"
+    },
+    "settings": {
+        "import/parsers": {
+            "@typescript-eslint/parser": [".ts"]
+        },
+        "import/resolver": {
+            "typescript": {
+                "alwaysTryTypes": true,
+                "project": "./tsconfig.json"
+            }
+        }
+    },
+    "plugins": ["import", "@typescript-eslint"],
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/strict-type-checked",
+        "plugin:@typescript-eslint/stylistic-type-checked",
+        "airbnb-typescript-base",
+        "prettier"
+    ],
+    "rules": {
+        "@typescript-eslint/no-non-null-assertion": "off",
+        "@typescript-eslint/no-shadow": [
+            "warn",
+            {
+                "allow": ["_"]
+            }
+        ],
+        "@typescript-eslint/no-use-before-define": "off",
+        "import/no-duplicates": "off",
+        "import/order": "off",
+        "import/prefer-default-export": "off",
+        "no-duplicate-imports": "off"
+    },
+    "ignorePatterns": [
+        "node_modules",
+        "dist",
+        "vite.config.ts",
+        "eslint.config.js",
+        "prettier.config.js"
+    ]
+}
