@@ -26,6 +26,8 @@
     "prettier"
   ],
   "rules": {
+    "@typescript-eslint/naming-convention": "off",
+    "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
     "@typescript-eslint/no-shadow": [
       "warn",
@@ -33,8 +35,10 @@
         "allow": ["_"]
       }
     ],
+    "@typescript-eslint/no-unsafe-assignment": "off",
     "@typescript-eslint/no-use-before-define": "off",
     "import/no-duplicates": "off",
+    "import/no-extraneous-dependencies": "off",
     "import/order": "off",
     "import/prefer-default-export": "off",
     "no-duplicate-imports": "off",
