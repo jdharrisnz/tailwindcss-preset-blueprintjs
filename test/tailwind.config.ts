@@ -1,4 +1,4 @@
-import { blueprint } from "../src/bp5/index.js"
+import blueprint from "../src/index.js"
 
 import type { Config } from "tailwindcss"
 
