@@ -1,0 +1,1 @@
+{"version":3,"file":"fontFamilyConfig.js","sourceRoot":"","sources":["../../../src/output/fontFamilyConfig.ts"],"names":[],"mappings":";;;;;;;;;;;;IAAa,QAAA,gBAAgB,GAAG;QAC9B,YAAY,EAAE;YACZ,UAAU,EAAE;gBACV,eAAe;gBACf,oBAAoB;gBACpB,UAAU;gBACV,QAAQ;gBACR,QAAQ;gBACR,QAAQ;gBACR,WAAW;gBACX,WAAW;gBACX,gBAAgB;gBAChB,oBAAoB;gBACpB,YAAY;aACb;YACD,UAAU,EAAE;gBACV,WAAW;aACZ;SACF;KACF,CAAA"}
