@@ -1,7 +1,8 @@
-import { blueprint } from "./configs/blueprint.js"
+import { blueprint } from "./output/blueprint.js"
 
 export default blueprint
-export { colorsConfig } from "./configs/colorsConfig.js"
-export { shadowsConfig } from "./configs/shadowsConfig.js"
-export { fontFamilyConfig } from "./configs/fontFamilyConfig.js"
-export { transitionTimingConfig } from "./configs/transitionTimingConfig.js"
+export { blueprint } from "./output/blueprint.js"
+export { colorsConfig } from "./output/colorsConfig.js"
+export { fontFamilyConfig } from "./output/fontFamilyConfig.js"
+export { shadowsConfig } from "./output/shadowsConfig.js"
+export { transitionTimingConfig } from "./output/transitionTimingConfig.js"
