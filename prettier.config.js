@@ -5,7 +5,7 @@ const config = {
     printWidth: 100,
     proseWrap: "always",
     semi: false,
-    tabWidth: 4,
+    tabWidth: 2,
     trailingComma: "none"
 }
 
