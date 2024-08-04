@@ -1,7 +1,7 @@
-import { colorsConfig } from "./colorsConfig.js"
-import { shadowsConfig } from "./shadowsConfig.js"
-import { fontFamilyConfig } from "./fontFamilyConfig.js"
-import { transitionTimingConfig } from "./transitionTimingConfig.js"
+import { colorsConfig } from "./colorsConfig"
+import { fontFamilyConfig } from "./fontFamilyConfig"
+import { shadowsConfig } from "./shadowsConfig"
+import { transitionTimingConfig } from "./transitionTimingConfig"
 
 /** Deliberately not typed as `Config` to avoid Tailwind version compatibility issues. */
 export const blueprint = {

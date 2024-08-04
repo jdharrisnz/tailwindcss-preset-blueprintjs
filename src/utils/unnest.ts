@@ -20,7 +20,7 @@ type Unnested<T> =
 export const unnest = <T extends Record<string, any>>(obj: T, parentKey = ""): Unnested<T> => {
     const result: Record<string, any> = {}
 
-    Object.keys(obj).forEach((key) => {
+    for (const key of Object.keys(obj)) {
         const value = obj[key]
         let fullKey = `${parentKey}-${String(key)}`
         if (parentKey === "") fullKey = String(key)
@@ -31,7 +31,7 @@ export const unnest = <T extends Record<string, any>>(obj: T, parentKey = ""): U
         } else {
             result[fullKey] = value
         }
-    })
+    }
 
     return result as Unnested<T>
 }
