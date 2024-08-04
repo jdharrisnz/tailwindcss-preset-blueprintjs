@@ -1,37 +1,37 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-type ConcatenatedKeys<T, Key extends string = ""> = T extends string | string[] | readonly string[]
-    ? Record<Key, T>
-    : T extends object
-      ? {
-            [K in keyof T]: ConcatenatedKeys<
-                T[K],
-                Key extends "" ? K & string : K extends "DEFAULT" ? Key : `${Key}-${K & string}`
-            >
-        }[keyof T]
-      : never
+const isRecord = (a: unknown): a is Record<string, unknown> =>
+  typeof a === "object" && a !== null && !Array.isArray(a)
 
-type AllKeys<T> = T extends unknown ? keyof T : never
-
-type Unnested<T> =
-    ConcatenatedKeys<T> extends infer CK
-        ? { [K in AllKeys<CK>]: Extract<CK, Record<K, unknown>>[K] }
-        : never
-
-export const unnest = <T extends Record<string, any>>(obj: T, parentKey = ""): Unnested<T> => {
-    const result: Record<string, any> = {}
-
-    for (const key of Object.keys(obj)) {
-        const value = obj[key]
-        let fullKey = `${parentKey}-${String(key)}`
-        if (parentKey === "") fullKey = String(key)
-        if (key === "DEFAULT") fullKey = parentKey
-
-        if (typeof value === "object" && value !== null && !Array.isArray(value)) {
-            Object.assign(result, unnest(value, fullKey))
-        } else {
-            result[fullKey] = value
-        }
-    }
-
-    return result as Unnested<T>
+interface InputRecord {
+  [x: string]: string | string[] | InputRecord
 }
+
+export const unnest = (
+  obj: InputRecord,
+  parentKey = ""
+): Record<string, string | string[]> =>
+  Object.entries(obj).reduce<Record<string, string | string[]>>(
+    (acc, [key, value]) => {
+      let fullKey = `${parentKey}-${key}`
+
+      // No parent
+      if (parentKey === "") {
+        fullKey = key
+      }
+
+      // Default doesn't have any identifier
+      if (key === "DEFAULT") {
+        fullKey = parentKey
+      }
+
+      // Recurse
+      if (isRecord(value)) {
+        Object.assign(acc, unnest(value, fullKey))
+        return acc
+      }
+
+      // Assign if reached bottom
+      acc[fullKey] = value
+      return acc
+    },
+    {}
+  )
