@@ -1,8 +1,8 @@
-/* eslint-disable @typescript-eslint/naming-convention */
-// eslint-disable-next-line import/no-extraneous-dependencies
+import * as fs from "fs"
+
 import { Colors } from "@blueprintjs/colors"
 
-import { unnest } from "../utils/unnest"
+import { unnest } from "../utils/unnest.js"
 
 const enum HexOpacity {
   p10 = "1a",
@@ -168,8 +168,7 @@ export const colorsConfig = {
         DEFAULT: Colors.BLUE2,
         dark: Colors.BLUE5
       },
-      // eslint-disable-next-line prefer-template
-      "text-selection-color": "#7dbcff" + HexOpacity.p60,
+      "text-selection-color": `#7dbcff${HexOpacity.p60}`,
       "icon-color": {
         DEFAULT: Colors.GRAY1,
         dark: Colors.GRAY4,
@@ -178,8 +177,8 @@ export const colorsConfig = {
           dark: Colors.LIGHT_GRAY5
         },
         disabled: {
-          DEFAULT: Colors.GRAY1 + HexOpacity.p60,
-          dark: Colors.GRAY4 + HexOpacity.p60
+          DEFAULT: `${Colors.GRAY1}${HexOpacity.p60}`,
+          dark: `${Colors.GRAY4}${HexOpacity.p60}`
         },
         selected: {
           DEFAULT: Colors.BLUE3,
@@ -188,13 +187,13 @@ export const colorsConfig = {
       },
       divider: {
         black: {
-          DEFAULT: Colors.BLACK + HexOpacity.p15,
-          dark: Colors.BLACK + HexOpacity.p40,
-          muted: Colors.BLACK + HexOpacity.p10
+          DEFAULT: `${Colors.BLACK}${HexOpacity.p15}`,
+          dark: `${Colors.BLACK}${HexOpacity.p40}`,
+          muted: `${Colors.BLACK}${HexOpacity.p10}`
         },
         white: {
-          dark: Colors.WHITE + HexOpacity.p20,
-          muted: Colors.WHITE + HexOpacity.p10
+          dark: `${Colors.WHITE}${HexOpacity.p20}`,
+          muted: `${Colors.WHITE}${HexOpacity.p10}`
         }
       },
       code: {
@@ -203,10 +202,15 @@ export const colorsConfig = {
           dark: Colors.GRAY4
         },
         "background-color": {
-          DEFAULT: Colors.WHITE + HexOpacity.p70,
-          dark: Colors.BLACK + HexOpacity.p30
+          DEFAULT: `${Colors.WHITE}${HexOpacity.p70}`,
+          dark: `${Colors.BLACK}${HexOpacity.p30}`
         }
       }
     }
   })
 }
+
+fs.writeFileSync(
+  "./src/output/colorsConfig.ts",
+  `export const colorsConfig = ${JSON.stringify(colorsConfig, undefined, 2)}`
+)

@@ -1,5 +1,6 @@
-/* eslint-disable @typescript-eslint/naming-convention */
-import { unnest } from "../utils/unnest"
+import * as fs from "fs"
+
+import { unnest } from "../utils/unnest.js"
 
 export const transitionTimingConfig = {
   transitionTimingFunction: unnest({
@@ -9,3 +10,8 @@ export const transitionTimingConfig = {
     }
   })
 }
+
+fs.writeFileSync(
+  "./src/output/transitionTimingConfig.ts",
+  `export const transitionTimingConfig = ${JSON.stringify(transitionTimingConfig, undefined, 2)}`
+)

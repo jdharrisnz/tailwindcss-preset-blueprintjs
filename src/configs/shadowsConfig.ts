@@ -1,5 +1,6 @@
-/* eslint-disable @typescript-eslint/naming-convention */
-import { unnest } from "../utils/unnest"
+import * as fs from "fs"
+
+import { unnest } from "../utils/unnest.js"
 
 export const shadowsConfig = {
   boxShadow: unnest({
@@ -10,9 +11,10 @@ export const shadowsConfig = {
           dark: "inset 0 0 0 1px rgba(255, 255, 255, 0.2)"
         },
         1: {
-          DEFAULT: ["0 0 0 1px rgba(17, 20, 24, 0.1)", "0 1px 1px rgba(17, 20, 24, 0.2)"].join(
-            ", "
-          ),
+          DEFAULT: [
+            "0 0 0 1px rgba(17, 20, 24, 0.1)",
+            "0 1px 1px rgba(17, 20, 24, 0.2)"
+          ].join(", "),
           dark: [
             "inset 0 0 0 1px rgba(255, 255, 255, 0.2)",
             "0 1px 1px 0 rgba(17, 20, 24, 0.4)"
@@ -96,7 +98,10 @@ export const shadowsConfig = {
           "0 2px 4px rgba(17, 20, 24, 0.2)",
           "0 8px 24px rgba(17, 20, 24, 0.2)"
         ].join(", "),
-        dark: ["0 2px 4px rgba(17, 20, 24, 0.4)", "0 8px 24px rgba(17, 20, 24, 0.4)"].join(", ")
+        dark: [
+          "0 2px 4px rgba(17, 20, 24, 0.4)",
+          "0 8px 24px rgba(17, 20, 24, 0.4)"
+        ].join(", ")
       },
       toast: {
         DEFAULT: [
@@ -113,3 +118,8 @@ export const shadowsConfig = {
     }
   })
 }
+
+fs.writeFileSync(
+  "./src/output/shadowsConfig.ts",
+  `export const shadowsConfig = ${JSON.stringify(shadowsConfig, undefined, 2)}`
+)

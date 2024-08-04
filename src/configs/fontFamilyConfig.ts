@@ -1,4 +1,6 @@
-import { unnest } from "../utils/unnest"
+import * as fs from "fs"
+
+import { unnest } from "../utils/unnest.js"
 
 export const fontFamilyConfig = {
   fontFamily: unnest({
@@ -20,3 +22,8 @@ export const fontFamilyConfig = {
     }
   })
 }
+
+fs.writeFileSync(
+  "./src/output/fontFamilyConfig.ts",
+  `export const fontFamilyConfig = ${JSON.stringify(fontFamilyConfig, undefined, 2)}`
+)
