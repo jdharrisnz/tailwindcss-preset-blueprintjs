@@ -1,12 +1,12 @@
-var o = function() {
-  return o = Object.assign || function(n) {
+var n = function() {
+  return n = Object.assign || function(e) {
     for (var r, A = 1, a = arguments.length; A < a; A++) {
       r = arguments[A];
       for (var R in r)
-        Object.prototype.hasOwnProperty.call(r, R) && (n[R] = r[R]);
+        Object.prototype.hasOwnProperty.call(r, R) && (e[R] = r[R]);
     }
-    return n;
-  }, o.apply(this, arguments);
+    return e;
+  }, n.apply(this, arguments);
 };
 var L = {
   BLACK: "#111418",
@@ -98,16 +98,17 @@ var L = {
   VIOLET3: "#9D3F9D",
   VIOLET4: "#BD6BBD",
   VIOLET5: "#D69FD6"
-}, E = o(o(o({}, L), D), G);
-const p = (e, n = "") => {
+}, E = n(n(n({}, L), D), G);
+const o = (p, e = "") => {
   const r = {};
-  return Object.keys(e).forEach((A) => {
-    const a = e[A];
-    let R = `${n}-${String(A)}`;
-    n === "" && (R = String(A)), A === "DEFAULT" && (R = n), typeof a == "object" && a !== null && !Array.isArray(a) ? Object.assign(r, p(a, R)) : r[R] = a;
-  }), r;
+  for (const A of Object.keys(p)) {
+    const a = p[A];
+    let R = `${e}-${String(A)}`;
+    e === "" && (R = String(A)), A === "DEFAULT" && (R = e), typeof a == "object" && a !== null && !Array.isArray(a) ? Object.assign(r, o(a, R)) : r[R] = a;
+  }
+  return r;
 }, I = {
-  colors: p({
+  colors: o({
     bp5: {
       black: E.BLACK,
       white: E.WHITE,
@@ -307,7 +308,26 @@ const p = (e, n = "") => {
     }
   })
 }, i = {
-  boxShadow: p({
+  fontFamily: o({
+    bp5: {
+      sans: [
+        "-apple-system",
+        "BlinkMacSystemFont",
+        "Segoe UI",
+        "Roboto",
+        "Oxygen",
+        "Ubuntu",
+        "Cantarell",
+        "Open Sans",
+        "Helvetica Neue",
+        "blueprint-icons-16",
+        "sans-serif"
+      ],
+      mono: ["monospace"]
+    }
+  })
+}, t = {
+  boxShadow: o({
     bp5: {
       elevation: {
         0: {
@@ -419,26 +439,7 @@ const p = (e, n = "") => {
     }
   })
 }, x = {
-  fontFamily: p({
-    bp5: {
-      sans: [
-        "-apple-system",
-        "BlinkMacSystemFont",
-        "Segoe UI",
-        "Roboto",
-        "Oxygen",
-        "Ubuntu",
-        "Cantarell",
-        "Open Sans",
-        "Helvetica Neue",
-        "blueprint-icons-16",
-        "sans-serif"
-      ],
-      mono: ["monospace"]
-    }
-  })
-}, t = {
-  transitionTimingFunction: p({
+  transitionTimingFunction: o({
     bp5: {
       DEFAULT: "cubic-bezier(0.4, 1, 0.75, 0.9)",
       bounce: "cubic-bezier(0.54, 1.12, 0.38, 1.11)"
@@ -449,16 +450,16 @@ const p = (e, n = "") => {
   theme: {
     extend: {
       ...I,
+      ...t,
       ...i,
-      ...x,
-      ...t
+      ...x
     }
   }
 };
 export {
-  O as blueprint,
   I as colorsConfig,
-  x as fontFamilyConfig,
-  i as shadowsConfig,
-  t as transitionTimingConfig
+  O as default,
+  i as fontFamilyConfig,
+  t as shadowsConfig,
+  x as transitionTimingConfig
 };

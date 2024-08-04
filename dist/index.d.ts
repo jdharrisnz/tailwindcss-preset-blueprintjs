@@ -1,5 +1,5 @@
 /** Deliberately not typed as `Config` to avoid Tailwind version compatibility issues. */
-export declare const blueprint: {
+declare const blueprint: {
     content: never[];
     theme: {
         extend: {
@@ -64,6 +64,7 @@ export declare const blueprint: {
         };
     };
 };
+export default blueprint;
 
 export declare const colorsConfig: {
     colors: {
