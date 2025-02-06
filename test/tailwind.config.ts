@@ -1,20 +1,8 @@
-import blueprint from "../src/index.js"
+import blueprint from "../src/index.ts"
 
 import type { Config } from "tailwindcss"
 
-const config: Config = {
-    content: ["./test/index.html"],
-    presets: [blueprint],
-    theme: {
-        extend: {}
-    },
-    plugins: [],
-    corePlugins: {
-        preflight: false
-    },
-    experimental: {
-        optimizeUniversalDefaults: true
-    }
-}
-
-export default config
+export default {
+  content: ["./test/index.html"],
+  presets: [blueprint],
+} satisfies Config
