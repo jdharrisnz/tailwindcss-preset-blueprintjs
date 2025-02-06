@@ -1,5 +1,5 @@
 export const fontFamilyConfig = {
-  "fontFamily": {
+  fontFamily: {
     "bp5-sans": [
       "-apple-system",
       "BlinkMacSystemFont",
@@ -11,10 +11,8 @@ export const fontFamilyConfig = {
       "Open Sans",
       "Helvetica Neue",
       "blueprint-icons-16",
-      "sans-serif"
+      "sans-serif",
     ],
-    "bp5-mono": [
-      "monospace"
-    ]
-  }
+    "bp5-mono": ["monospace"],
+  },
 }

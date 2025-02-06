@@ -1,8 +1,7 @@
 export const blueprint = {
-  "content": [],
-  "theme": {
-    "extend": {
-      "colors": {
+  theme: {
+    extend: {
+      colors: {
         "bp5-black": "#111418",
         "bp5-white": "#FFFFFF",
         "bp5-dark-gray-1": "#1C2127",
@@ -123,31 +122,57 @@ export const blueprint = {
         "bp5-code-text-color": "#5F6B7C",
         "bp5-code-text-color-dark": "#ABB3BF",
         "bp5-code-background-color": "#FFFFFFb3",
-        "bp5-code-background-color-dark": "#1114184d"
+        "bp5-code-background-color-dark": "#1114184d",
       },
-      "boxShadow": {
+      spacing: {
+        "bp5-grid-1": "10px",
+        "bp5-grid-2": "20px",
+        "bp5-grid-3": "30px",
+        "bp5-grid-4": "40px",
+        "bp5-grid-0.5": "5px",
+        "bp5-grid-1.5": "15px",
+      },
+      boxShadow: {
         "bp5-elevation-0": "0 0 0 1px rgba(17, 20, 24, 0.15)",
         "bp5-elevation-0-dark": "inset 0 0 0 1px rgba(255, 255, 255, 0.2)",
-        "bp5-elevation-1": "0 0 0 1px rgba(17, 20, 24, 0.1), 0 1px 1px rgba(17, 20, 24, 0.2)",
-        "bp5-elevation-1-dark": "inset 0 0 0 1px rgba(255, 255, 255, 0.2), 0 1px 1px 0 rgba(17, 20, 24, 0.4)",
-        "bp5-elevation-2": "0 0 0 1px rgba(17, 20, 24, 0.1), 0 1px 1px rgba(17, 20, 24, 0.2), 0 2px 6px rgba(17, 20, 24, 0.2)",
-        "bp5-elevation-2-dark": "inset 0 0 0 1px rgba(255, 255, 255, 0.2), 0 1px 1px rgba(17, 20, 24, 0.4), 0 2px 6px rgba(17, 20, 24, 0.4)",
-        "bp5-elevation-3": "0 0 0 1px rgba(17, 20, 24, 0.1), 0 2px 4px rgba(17, 20, 24, 0.2), 0 8px 24px rgba(17, 20, 24, 0.2)",
-        "bp5-elevation-3-dark": "inset 0 0 0 1px rgba(255, 255, 255, 0.2), 0 2px 4px rgba(17, 20, 24, 0.4), 0 8px 24px rgba(17, 20, 24, 0.4)",
-        "bp5-elevation-4": "0 0 0 1px rgba(17, 20, 24, 0.1), 0 4px 8px rgba(17, 20, 24, 0.2), 0 18px 46px 6px rgba(17, 20, 24, 0.2)",
-        "bp5-elevation-4-dark": "inset 0 0 0 1px rgba(255, 255, 255, 0.2), 0 4px 8px rgba(17, 20, 24, 0.4), 0 18px 46px 6px rgba(17, 20, 24, 0.4)",
-        "bp5-input": "inset 0 0 0 1px rgba(17, 20, 24, 0.2), inset 0 1px 1px rgba(17, 20, 24, 0.3)",
-        "bp5-input-dark": "inset 0 0 0 1px rgba(255, 255, 255, 0.2), inset 0 -1px 1px 0 rgba(255, 255, 255, 0.3)",
-        "bp5-dialog": "0 0 0 1px rgba(17, 20, 24, 0.1), 0 2px 4px rgba(17, 20, 24, 0.2), 0 8px 24px rgba(17, 20, 24, 0.2)",
-        "bp5-dialog-dark": "inset 0 0 0 1px rgba(255, 255, 255, 0.2), 0 2px 4px rgba(17, 20, 24, 0.4), 0 8px 24px rgba(17, 20, 24, 0.4)",
-        "bp5-popover": "0 0 0 1px rgba(17, 20, 24, 0.1), 0 2px 4px rgba(17, 20, 24, 0.2), 0 8px 24px rgba(17, 20, 24, 0.2)",
-        "bp5-popover-dark": "0 0 0 1px hsl(215, 3%, 38%), inset 0 0 0 1px rgba(255, 255, 255, 0.2), 0 2px 4px rgba(17, 20, 24, 0.4), 0 8px 24px rgba(17, 20, 24, 0.4)",
-        "bp5-tooltip": "0 0 0 1px rgba(17, 20, 24, 0.1), 0 2px 4px rgba(17, 20, 24, 0.2), 0 8px 24px rgba(17, 20, 24, 0.2)",
-        "bp5-tooltip-dark": "0 2px 4px rgba(17, 20, 24, 0.4), 0 8px 24px rgba(17, 20, 24, 0.4)",
-        "bp5-toast": "inset 0 0 0 1px rgba(17, 20, 24, 0.2), 0 2px 4px rgba(17, 20, 24, 0.2), 0 8px 24px rgba(17, 20, 24, 0.2)",
-        "bp5-toast-dark": "inset 0 0 0 1px rgba(255, 255, 255, 0.2), 0 2px 4px rgba(17, 20, 24, 0.2 * 2), 0 8px 24px rgba(17, 20, 24, 0.2 * 2)"
+        "bp5-elevation-1":
+          "0 0 0 1px rgba(17, 20, 24, 0.1), 0 1px 1px rgba(17, 20, 24, 0.2)",
+        "bp5-elevation-1-dark":
+          "inset 0 0 0 1px rgba(255, 255, 255, 0.2), 0 1px 1px 0 rgba(17, 20, 24, 0.4)",
+        "bp5-elevation-2":
+          "0 0 0 1px rgba(17, 20, 24, 0.1), 0 1px 1px rgba(17, 20, 24, 0.2), 0 2px 6px rgba(17, 20, 24, 0.2)",
+        "bp5-elevation-2-dark":
+          "inset 0 0 0 1px rgba(255, 255, 255, 0.2), 0 1px 1px rgba(17, 20, 24, 0.4), 0 2px 6px rgba(17, 20, 24, 0.4)",
+        "bp5-elevation-3":
+          "0 0 0 1px rgba(17, 20, 24, 0.1), 0 2px 4px rgba(17, 20, 24, 0.2), 0 8px 24px rgba(17, 20, 24, 0.2)",
+        "bp5-elevation-3-dark":
+          "inset 0 0 0 1px rgba(255, 255, 255, 0.2), 0 2px 4px rgba(17, 20, 24, 0.4), 0 8px 24px rgba(17, 20, 24, 0.4)",
+        "bp5-elevation-4":
+          "0 0 0 1px rgba(17, 20, 24, 0.1), 0 4px 8px rgba(17, 20, 24, 0.2), 0 18px 46px 6px rgba(17, 20, 24, 0.2)",
+        "bp5-elevation-4-dark":
+          "inset 0 0 0 1px rgba(255, 255, 255, 0.2), 0 4px 8px rgba(17, 20, 24, 0.4), 0 18px 46px 6px rgba(17, 20, 24, 0.4)",
+        "bp5-input":
+          "inset 0 0 0 1px rgba(17, 20, 24, 0.2), inset 0 1px 1px rgba(17, 20, 24, 0.3)",
+        "bp5-input-dark":
+          "inset 0 0 0 1px rgba(255, 255, 255, 0.2), inset 0 -1px 1px 0 rgba(255, 255, 255, 0.3)",
+        "bp5-dialog":
+          "0 0 0 1px rgba(17, 20, 24, 0.1), 0 2px 4px rgba(17, 20, 24, 0.2), 0 8px 24px rgba(17, 20, 24, 0.2)",
+        "bp5-dialog-dark":
+          "inset 0 0 0 1px rgba(255, 255, 255, 0.2), 0 2px 4px rgba(17, 20, 24, 0.4), 0 8px 24px rgba(17, 20, 24, 0.4)",
+        "bp5-popover":
+          "0 0 0 1px rgba(17, 20, 24, 0.1), 0 2px 4px rgba(17, 20, 24, 0.2), 0 8px 24px rgba(17, 20, 24, 0.2)",
+        "bp5-popover-dark":
+          "0 0 0 1px hsl(215, 3%, 38%), inset 0 0 0 1px rgba(255, 255, 255, 0.2), 0 2px 4px rgba(17, 20, 24, 0.4), 0 8px 24px rgba(17, 20, 24, 0.4)",
+        "bp5-tooltip":
+          "0 0 0 1px rgba(17, 20, 24, 0.1), 0 2px 4px rgba(17, 20, 24, 0.2), 0 8px 24px rgba(17, 20, 24, 0.2)",
+        "bp5-tooltip-dark":
+          "0 2px 4px rgba(17, 20, 24, 0.4), 0 8px 24px rgba(17, 20, 24, 0.4)",
+        "bp5-toast":
+          "inset 0 0 0 1px rgba(17, 20, 24, 0.2), 0 2px 4px rgba(17, 20, 24, 0.2), 0 8px 24px rgba(17, 20, 24, 0.2)",
+        "bp5-toast-dark":
+          "inset 0 0 0 1px rgba(255, 255, 255, 0.2), 0 2px 4px rgba(17, 20, 24, 0.2 * 2), 0 8px 24px rgba(17, 20, 24, 0.2 * 2)",
       },
-      "fontFamily": {
+      fontFamily: {
         "bp5-sans": [
           "-apple-system",
           "BlinkMacSystemFont",
@@ -159,16 +184,14 @@ export const blueprint = {
           "Open Sans",
           "Helvetica Neue",
           "blueprint-icons-16",
-          "sans-serif"
+          "sans-serif",
         ],
-        "bp5-mono": [
-          "monospace"
-        ]
+        "bp5-mono": ["monospace"],
       },
-      "transitionTimingFunction": {
-        "bp5": "cubic-bezier(0.4, 1, 0.75, 0.9)",
-        "bp5-bounce": "cubic-bezier(0.54, 1.12, 0.38, 1.11)"
-      }
-    }
-  }
+      transitionTimingFunction: {
+        bp5: "cubic-bezier(0.4, 1, 0.75, 0.9)",
+        "bp5-bounce": "cubic-bezier(0.54, 1.12, 0.38, 1.11)",
+      },
+    },
+  },
 }

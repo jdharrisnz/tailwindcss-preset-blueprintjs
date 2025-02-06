@@ -1,5 +1,5 @@
 export const colorsConfig = {
-  "colors": {
+  colors: {
     "bp5-black": "#111418",
     "bp5-white": "#FFFFFF",
     "bp5-dark-gray-1": "#1C2127",
@@ -120,6 +120,6 @@ export const colorsConfig = {
     "bp5-code-text-color": "#5F6B7C",
     "bp5-code-text-color-dark": "#ABB3BF",
     "bp5-code-background-color": "#FFFFFFb3",
-    "bp5-code-background-color-dark": "#1114184d"
-  }
+    "bp5-code-background-color-dark": "#1114184d",
+  },
 }
