@@ -7,9 +7,9 @@ colors, shadows, fonts, and transitions from
 ## About
 
 This package provides a preset to make available as Tailwind utility classes the
-colors, shadows, fonts, and transitions used by Blueprint. If you want to pick
-out only certain parts, you can also simply import each element separately and
-spread it into your config.
+colors, spacing, fonts, shadows, and transition timings used by Blueprint. If
+you want to pick out only certain parts, you can also simply import each element
+separately and spread it into your config.
 
 ## Naming Conventions
 
@@ -68,19 +68,19 @@ Simply run `npm install --save-dev tailwindcss-preset-blueprintjs`.
 ## Usage
 
 To make everything available, add a `presets` key to your Tailwind config file.
-See the test [tailwind.config.ts](test/tailwind.config.ts) for a full example.
+In Tailwind v4, you'll have to add a line in your css referencing your config
+file, like `@config "./tailwind.config.js";`
 
 ```js
 // tailwind.config.js
+
 import blueprint from "tailwindcss-preset-blueprintjs"
 
-const config = {
+export default {
   // ...
-  presets: [blueprint]
+  presets: [blueprint],
   // ...
 }
-
-export default config
 ```
 
 Otherwise, you may also import each part separately and spread them into your
@@ -88,28 +88,29 @@ config.
 
 ```js
 // tailwind.config.js
+
 import {
   colorsConfig,
-  shadowsConfig,
   fontFamilyConfig,
-  transitionTimingConfig
+  shadowsConfig,
+  spacingConfig,
+  transitionTimingConfig,
 } from "tailwindcss-preset-blueprintjs"
 
-const config = {
+export default {
   // ...
   theme: {
     extend: {
       ...colorsConfig,
+      ...spacingConfig,
       ...shadowsConfig,
       ...fontFamilyConfig,
-      ...transitionTimingConfig
+      ...transitionTimingConfig,
       // ...
-    }
-  }
+    },
+  },
   // ...
 }
-
-export default config
 ```
 
 ## All the Classes
@@ -159,6 +160,11 @@ export default config
 `bp5-divider-black-muted`, `bp5-divider-white-dark`, `bp5-divider-white-muted`,
 `bp5-code-text-color`, `bp5-code-text-color-dark`, `bp5-code-background-color`,
 `bp5-code-background-color-dark`
+
+### Spacing
+
+`bp5-grid-0.5`, `bp5-grid-1`, `bp5-grid-1.5`, `bp5-grid-2`, `bp5-grid-3`,
+`bp5-grid-4`
 
 ### Shadows
 
