@@ -122,7 +122,7 @@ export const shadowsConfig = {
 }
 
 export const writeShadowsConfig = async () => {
-  const file = path.resolve("src", "output", "shadowsConfig.ts")
+  const file = path.resolve("output", "shadowsConfig.ts")
 
   return fs
     .writeFile(

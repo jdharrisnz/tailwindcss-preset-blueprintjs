@@ -13,7 +13,7 @@ const HexOpacity = {
   p40: "66",
   p60: "99",
   p70: "b3",
-}
+} as const
 
 export const colorsConfig = {
   colors: unnest({
@@ -212,7 +212,7 @@ export const colorsConfig = {
 }
 
 export const writeColorsConfig = async () => {
-  const file = path.resolve("src", "output", "colorsConfig.ts")
+  const file = path.resolve("output", "colorsConfig.ts")
 
   return fs
     .writeFile(

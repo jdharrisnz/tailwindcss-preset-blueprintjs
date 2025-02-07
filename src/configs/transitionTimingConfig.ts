@@ -14,7 +14,7 @@ export const transitionTimingConfig = {
 }
 
 export const writeTransitionTimingConfig = async () => {
-  const file = path.resolve("src", "output", "transitionTimingConfig.ts")
+  const file = path.resolve("output", "transitionTimingConfig.ts")
 
   return fs
     .writeFile(

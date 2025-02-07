@@ -20,7 +20,7 @@ export const spacingConfig = {
 }
 
 export const writeSpacingConfig = async () => {
-  const file = path.resolve("src", "output", "spacingConfig.ts")
+  const file = path.resolve("output", "spacingConfig.ts")
 
   return fs
     .writeFile(

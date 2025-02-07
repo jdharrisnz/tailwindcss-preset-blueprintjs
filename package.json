@@ -17,18 +17,14 @@
   "license": "MIT",
   "author": "Joshua Harris",
   "type": "module",
-  "main": "./dist/umd/index.js",
-  "module": "./dist/esm/index.js",
-  "types": "./dist/dts/index.d.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "scripts": {
-    "build": "pnpm clean && pnpm run create && pnpm build-esm && pnpm build-umd && pnpm build-dts",
-    "build-dts": "tsc -p tsconfig.dts.json",
-    "build-esm": "tsc -p tsconfig.esm.json",
-    "build-umd": "tsc -p tsconfig.umd.json",
+    "build": "pnpm clean && pnpm run create && tsc -p tsconfig.build.json",
     "clean": "rimraf --glob ./src/output/* && rimraf --glob ./dist/* ",
     "create": "node ./src/configs/blueprint.ts",
     "preinstall": "npx only-allow pnpm",

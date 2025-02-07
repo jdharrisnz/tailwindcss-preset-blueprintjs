@@ -26,14 +26,32 @@ const blueprint: Config = {
 }
 
 const writeBlueprintConfig = async () => {
-  const file = path.resolve("src", "output", "blueprint.ts")
+  const bpFile = path.resolve("output", "blueprint.ts")
+  const indexFile = path.resolve("output", "index.ts")
 
   return fs
     .writeFile(
-      file,
+      bpFile,
       `export const blueprint = ${JSON.stringify(blueprint, undefined, 2)}`,
     )
-    .then(() => exec(`prettier -w ${file}`))
+    .then(() => exec(`prettier -w ${bpFile}`))
+    .then(() =>
+      fs.writeFile(
+        indexFile,
+        `
+        import { blueprint } from "./blueprint.js"
+        
+        export default blueprint
+        export { blueprint } from "./blueprint.js"
+        export { colorsConfig } from "./colorsConfig.js"
+        export { fontFamilyConfig } from "./fontFamilyConfig.js"
+        export { shadowsConfig } from "./shadowsConfig.js"
+        export { spacingConfig } from "./spacingConfig.js"
+        export { transitionTimingConfig } from "./transitionTimingConfig.js"
+        `,
+      ),
+    )
+    .then(() => exec(`prettier -w ${indexFile}`))
 }
 
 await Promise.all([

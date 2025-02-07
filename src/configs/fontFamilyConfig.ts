@@ -26,7 +26,7 @@ export const fontFamilyConfig = {
 }
 
 export const writeFontFamilyConfig = async () => {
-  const file = path.resolve("src", "output", "fontFamilyConfig.ts")
+  const file = path.resolve("output", "fontFamilyConfig.ts")
 
   return fs
     .writeFile(
