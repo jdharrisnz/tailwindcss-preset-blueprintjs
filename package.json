@@ -27,7 +27,6 @@
     "build": "pnpm clean && pnpm run create && tsc -p tsconfig.build.json",
     "clean": "rimraf --glob ./src/output/* && rimraf --glob ./dist/* ",
     "create": "node ./src/configs/blueprint.ts",
-    "preinstall": "npx only-allow pnpm",
     "test": "npx tailwindcss -i ./test/index.css -o ./test/output.css"
   },
   "devDependencies": {
