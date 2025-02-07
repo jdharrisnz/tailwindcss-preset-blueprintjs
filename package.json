@@ -1,6 +1,6 @@
 {
   "name": "tailwindcss-preset-blueprintjs",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A preset for Tailwind CSS to load colors, spacing, shadows, fonts, and transitions from BlueprintJS.",
   "keywords": [
     "tailwindcss",
