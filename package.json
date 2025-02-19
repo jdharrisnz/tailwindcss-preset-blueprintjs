@@ -16,6 +16,7 @@
   },
   "license": "MIT",
   "author": "Joshua Harris",
+  "sideEffects": false,
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
