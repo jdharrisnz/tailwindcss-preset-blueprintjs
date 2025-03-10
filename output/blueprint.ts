@@ -94,7 +94,7 @@ export const blueprint = {
         "bp5-intent-warning": "#C87619",
         "bp5-intent-danger": "#CD4246",
         "bp5-app-background-color": "#F6F7F9",
-        "bp5-app-background-color-dark": "#252A31",
+        "bp5-app-background-color-dark": "#1C2127",
         "bp5-text-color": "#1C2127",
         "bp5-text-color-dark": "#F6F7F9",
         "bp5-text-color-muted": "#5F6B7C",

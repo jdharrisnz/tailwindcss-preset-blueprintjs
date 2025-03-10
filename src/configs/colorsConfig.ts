@@ -147,7 +147,7 @@ export const colorsConfig = {
       },
       "app-background-color": {
         DEFAULT: Colors.LIGHT_GRAY5,
-        dark: Colors.DARK_GRAY2,
+        dark: Colors.DARK_GRAY1,
       },
       "text-color": {
         DEFAULT: Colors.DARK_GRAY1,
